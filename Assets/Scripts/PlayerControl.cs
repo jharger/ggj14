@@ -39,7 +39,10 @@ public class PlayerControl : MonoBehaviour
 		landParticles.renderer.sortingLayerName = "foreground";
 		landParticles.renderer.sortingOrder = 5;
 		GameObject grappleObj = GameObject.FindGameObjectWithTag("Grapple");
-		grapple = grappleObj.GetComponent<GrappleControl>();
+		if(grappleObj) {
+			grapple = grappleObj.GetComponent<GrappleControl>();
+			grapple.player = grappleAnchor;
+		}
 		//anim = GetComponent<Animator>();
 	}
 
@@ -57,7 +60,7 @@ public class PlayerControl : MonoBehaviour
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if(Input.GetButtonDown("Jump")) {
-			if(grounded) {
+			if(grounded || grapple.isAnchored) {
 				jump = true;
 				jumpDirection = new Vector2(0f, jumpForce);
 			} else if(leftWalled && okayToWallJump) {
@@ -75,18 +78,21 @@ public class PlayerControl : MonoBehaviour
 
 	void LateUpdate ()
 	{
-		if(grapple != null && grapple.gameObject.activeSelf) {
-			grapple.SetPlayerPos(grappleAnchor.position);
+		Vector3 mouseTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		if(Input.GetButtonDown("Fire2")) {
+			grapple.Fire(grappleAnchor.position, mouseTarget);
 		}
 	}
 
 	void FixedUpdate ()
 	{
 		float moveScale = 1f;
-		if(grapple != null && grapple.gameObject.activeSelf) {
-			float v = Input.GetAxis("Vertical");
-			grapple.ExtendGrapple(-v * Time.fixedDeltaTime);
-			moveScale = grappleMoveScale;
+		if(grapple != null) {
+			if(grapple.isAnchored) {
+				float v = Input.GetAxis("Vertical");
+				grapple.ExtendGrapple(-v * Time.fixedDeltaTime);
+				moveScale = grappleMoveScale;
+			}
 		}
 
 		// Cache the horizontal input.
@@ -121,6 +127,8 @@ public class PlayerControl : MonoBehaviour
 		// If the player should jump...
 		if(jump)
 		{
+			grapple.Disconnect();
+
 			// Set the Jump animator trigger parameter.
 			//anim.SetTrigger("Jump");
 

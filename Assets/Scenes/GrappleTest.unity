@@ -412,7 +412,8 @@ GameObject:
   - 232: {fileID: 118941187}
   - 120: {fileID: 118941190}
   - 114: {fileID: 118941191}
-  m_Layer: 0
+  - 58: {fileID: 118941192}
+  m_Layer: 13
   m_Name: Grapple
   m_TagString: Grapple
   m_Icon: {fileID: 1182211791, guid: 0000000000000000d000000000000000, type: 0}
@@ -439,13 +440,13 @@ Rigidbody2D:
   m_GameObject: {fileID: 118941186}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: .25
   m_FixedAngle: 0
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!4 &118941189
 Transform:
   m_ObjectHideFlags: 0
@@ -504,9 +505,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGrappleLength: 1
-  maxGrappleLength: 5
+  maxGrappleLength: 20
   grappleSpeed: 1
+  fireSpeed: 30
   ropeScale: .200000003
+  isAnchored: 0
+  player: {fileID: 0}
+--- !u!58 &118941192
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 118941186}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Radius: .150000006
+  m_Center: {x: 0, y: 0}
 --- !u!1 &245497384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,9 +2458,9 @@ MonoBehaviour:
   facingRight: 1
   jump: 0
   moveForce: 200
-  maxSpeed: 4
+  maxSpeed: 5
   jumpForce: 820
-  grappleMoveScale: .100000001
+  grappleMoveScale: .0500000007
 --- !u!95 &798759571
 Animator:
   serializedVersion: 2
@@ -4061,8 +4076,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1522488360}
   - 212: {fileID: 1522488361}
-  m_Layer: 0
-  m_Name: Grapple
+  m_Layer: 13
+  m_Name: Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4075,7 +4090,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1522488359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .0399999991, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 118941189}

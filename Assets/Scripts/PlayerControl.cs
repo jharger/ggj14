@@ -32,6 +32,7 @@ public class PlayerControl : MonoBehaviour
 	static int animVarSpeed = Animator.StringToHash("Speed");
 	static int animVarJump = Animator.StringToHash("Jump");
 	static int animVarGrounded = Animator.StringToHash("Grounded");
+	static int animVarAttack = Animator.StringToHash("Attack");
 
 	void Awake()
 	{
@@ -80,6 +81,9 @@ public class PlayerControl : MonoBehaviour
 			}
 		}
 
+		if(Input.GetButtonDown("Fire1")) {
+			anim.SetTrigger(animVarAttack);
+		}
 	}
 
 	void LateUpdate ()

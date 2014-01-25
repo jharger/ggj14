@@ -1,0 +1,697 @@
+fileFormatVersion: 2
+guid: 58ae25ae21a1742daacf014cd2a83582
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: HumanMaleSpritePageA_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 405
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 405
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 405
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_3
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 405
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_4
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 405
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_5
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 405
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_6
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 405
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_7
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 405
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_8
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 405
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 348
+        width: 22
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_10
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 348
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_11
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 348
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_12
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 348
+        width: 22
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_13
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 348
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_14
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 348
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_15
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 348
+        width: 22
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_16
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 348
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_17
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 348
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 291
+        width: 22
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_19
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 291
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_20
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 291
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_21
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 291
+        width: 22
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_22
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 291
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_23
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 291
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_24
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 291
+        width: 22
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_25
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 291
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_26
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 291
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_27
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 234
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_28
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 234
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_29
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 234
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_30
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 234
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_31
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 234
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_32
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 234
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_33
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 234
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_34
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 234
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_35
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 234
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_36
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 177
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_37
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 177
+        width: 22
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_38
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 177
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_39
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 177
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_40
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 177
+        width: 22
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_41
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 177
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_42
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 177
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_43
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 177
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_44
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 177
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_45
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 120
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_46
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 120
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_47
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 120
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_48
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 120
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_49
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 120
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_50
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 120
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_51
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 120
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_52
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 120
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_53
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 120
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_54
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 63
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_55
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 63
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_56
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 63
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_57
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 63
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_58
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 63
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_59
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 63
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_60
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 63
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_61
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 63
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_62
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 63
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_63
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 6
+        width: 22
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_64
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 6
+        width: 21
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_65
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 6
+        width: 21
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_66
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 6
+        width: 22
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_67
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 6
+        width: 21
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_68
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 6
+        width: 21
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_69
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 6
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_70
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 6
+        width: 21
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: HumanMaleSpritePageA_71
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 6
+        width: 21
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 

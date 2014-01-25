@@ -12,6 +12,8 @@ public class GrappleControl : MonoBehaviour {
 	public float ropeScale = 0.2f;
 	[HideInInspector]
 	public bool isAnchored = false;
+	[HideInInspector]
+	public bool isPulling = false;
 
 	private DistanceJoint2D grappleJoint;
 	private LineRenderer lineRenderer;
@@ -25,6 +27,13 @@ public class GrappleControl : MonoBehaviour {
 		anchor = transform.FindChild("Anchor").GetComponent<SpriteRenderer>();
 
 		Disconnect();
+	}
+
+	void FixedUpdate()
+	{
+		if(isPulling) {
+			ExtendGrapple(-0.1f);
+		}
 	}
 
 	void LateUpdate()
@@ -66,6 +75,7 @@ public class GrappleControl : MonoBehaviour {
 		rigidbody2D.isKinematic = true;
 		anchor.enabled = false;
 		isAnchored = false;
+		isPulling = false;
 	}
 
 	public void ExtendGrapple(float amount)
@@ -80,5 +90,9 @@ public class GrappleControl : MonoBehaviour {
 		rigidbody2D.isKinematic = true;
 		isAnchored = true;
 		grappleJoint.distance = Vector3.Distance(player.position, transform.position);
+
+		if(other.CompareTag("Enemy")) {
+			isPulling = true;
+		}
 	}
 }

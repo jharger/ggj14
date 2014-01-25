@@ -13,8 +13,10 @@ public class PlayerControl : MonoBehaviour
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
 	//public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
-	public float timeBetweenWallJumps = 0.5f;
 
+	public float minGrappleLength = 1f;
+	public float maxGrappleLength = 5f;
+	public float grappleSpeed = 1f;
 
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private Transform rightWallCheck;
@@ -25,6 +27,8 @@ public class PlayerControl : MonoBehaviour
 	private Vector2 jumpDirection = Vector2.zero;
 	private bool okayToWallJump = true;
 	//private Animator anim;					// Reference to the player's animator component.
+
+	private DistanceJoint2D grappleJoint;
 
 	private ParticleSystem landParticles;
 
@@ -37,6 +41,8 @@ public class PlayerControl : MonoBehaviour
 		landParticles = transform.Find("landParticles").GetComponent<ParticleSystem>();
 		landParticles.renderer.sortingLayerName = "foreground";
 		landParticles.renderer.sortingOrder = 5;
+		GameObject grapple = GameObject.FindGameObjectWithTag("Grapple");
+		grappleJoint = grapple.GetComponent<DistanceJoint2D>();
 		//anim = GetComponent<Animator>();
 	}
 
@@ -67,11 +73,16 @@ public class PlayerControl : MonoBehaviour
 				okayToWallJump = false;
 			}
 		}
+
 	}
 
 
 	void FixedUpdate ()
 	{
+		float v = Input.GetAxis("Vertical");
+		float newDist = Mathf.Clamp(grappleJoint.distance - v * grappleSpeed * Time.fixedDeltaTime,minGrappleLength, maxGrappleLength);
+		grappleJoint.distance = newDist;
+
 		// Cache the horizontal input.
 		float h = Input.GetAxis("Horizontal");
 

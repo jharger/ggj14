@@ -1,4 +1,4 @@
 ggj14
 =====
 
-Our Global Game Jam 14 repository
+Our Global Game Jam 2014 repository

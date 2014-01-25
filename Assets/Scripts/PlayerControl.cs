@@ -8,19 +8,16 @@ public class PlayerControl : MonoBehaviour
 	[HideInInspector]
 	public bool jump = false;				// Condition for whether the player should jump.
 
-
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
 	//public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
-
-	public float minGrappleLength = 1f;
-	public float maxGrappleLength = 5f;
-	public float grappleSpeed = 1f;
+	public float grappleMoveScale = 0.1f;
 
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private Transform rightWallCheck;
 	private Transform leftWallCheck;
+	private Transform grappleAnchor;
 	private bool grounded = false;			// Whether or not the player is grounded.
 	private bool rightWalled = false;
 	private bool leftWalled = false;
@@ -28,8 +25,7 @@ public class PlayerControl : MonoBehaviour
 	private bool okayToWallJump = true;
 	//private Animator anim;					// Reference to the player's animator component.
 
-	private DistanceJoint2D grappleJoint;
-
+	private GrappleControl grapple;
 	private ParticleSystem landParticles;
 
 	void Awake()
@@ -38,11 +34,12 @@ public class PlayerControl : MonoBehaviour
 		groundCheck = transform.Find("groundCheck");
 		rightWallCheck = transform.Find("rightWallCheck");
 		leftWallCheck = transform.Find("leftWallCheck");
+		grappleAnchor = transform.Find("grappleAnchor");
 		landParticles = transform.Find("landParticles").GetComponent<ParticleSystem>();
 		landParticles.renderer.sortingLayerName = "foreground";
 		landParticles.renderer.sortingOrder = 5;
-		GameObject grapple = GameObject.FindGameObjectWithTag("Grapple");
-		grappleJoint = grapple.GetComponent<DistanceJoint2D>();
+		GameObject grappleObj = GameObject.FindGameObjectWithTag("Grapple");
+		grapple = grappleObj.GetComponent<GrappleControl>();
 		//anim = GetComponent<Animator>();
 	}
 
@@ -76,15 +73,24 @@ public class PlayerControl : MonoBehaviour
 
 	}
 
+	void LateUpdate ()
+	{
+		if(grapple != null && grapple.gameObject.activeSelf) {
+			grapple.SetPlayerPos(grappleAnchor.position);
+		}
+	}
 
 	void FixedUpdate ()
 	{
-		float v = Input.GetAxis("Vertical");
-		float newDist = Mathf.Clamp(grappleJoint.distance - v * grappleSpeed * Time.fixedDeltaTime,minGrappleLength, maxGrappleLength);
-		grappleJoint.distance = newDist;
+		float moveScale = 1f;
+		if(grapple != null && grapple.gameObject.activeSelf) {
+			float v = Input.GetAxis("Vertical");
+			grapple.ExtendGrapple(-v * Time.fixedDeltaTime);
+			moveScale = grappleMoveScale;
+		}
 
 		// Cache the horizontal input.
-		float h = Input.GetAxis("Horizontal");
+		float h = Input.GetAxis("Horizontal") * moveScale;
 
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		//anim.SetFloat("Speed", Mathf.Abs(h));

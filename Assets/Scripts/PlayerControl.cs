@@ -13,17 +13,30 @@ public class PlayerControl : MonoBehaviour
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
 	//public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
+	public float timeBetweenWallJumps = 0.5f;
 
 
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
+	private Transform rightWallCheck;
+	private Transform leftWallCheck;
 	private bool grounded = false;			// Whether or not the player is grounded.
+	private bool rightWalled = false;
+	private bool leftWalled = false;
+	private Vector2 jumpDirection = Vector2.zero;
+	private bool okayToWallJump = true;
 	//private Animator anim;					// Reference to the player's animator component.
 
+	private ParticleSystem landParticles;
 
 	void Awake()
 	{
 		// Setting up references.
 		groundCheck = transform.Find("groundCheck");
+		rightWallCheck = transform.Find("rightWallCheck");
+		leftWallCheck = transform.Find("leftWallCheck");
+		landParticles = transform.Find("landParticles").GetComponent<ParticleSystem>();
+		landParticles.renderer.sortingLayerName = "foreground";
+		landParticles.renderer.sortingOrder = 5;
 		//anim = GetComponent<Animator>();
 	}
 
@@ -32,10 +45,28 @@ public class PlayerControl : MonoBehaviour
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
+		rightWalled = Physics2D.Linecast(transform.position, rightWallCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+		leftWalled = Physics2D.Linecast(transform.position, leftWallCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+
+		if(!rightWalled && !leftWalled) {
+			okayToWallJump = true;
+		}
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if(Input.GetButtonDown("Jump") && grounded)
-			jump = true;
+		if(Input.GetButtonDown("Jump")) {
+			if(grounded) {
+				jump = true;
+				jumpDirection = new Vector2(0f, jumpForce);
+			} else if(leftWalled && okayToWallJump) {
+				jump = true;
+				jumpDirection = new Vector2(jumpForce * 0.6f, jumpForce);
+				okayToWallJump = false;
+			} else if(rightWalled && okayToWallJump) {
+				jump = true;
+				jumpDirection = new Vector2(jumpForce * -0.6f, jumpForce);
+				okayToWallJump = false;
+			}
+		}
 	}
 
 
@@ -48,23 +79,27 @@ public class PlayerControl : MonoBehaviour
 		//anim.SetFloat("Speed", Mathf.Abs(h));
 
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-		if(h * rigidbody2D.velocity.x < maxSpeed)
+		if(h * rigidbody2D.velocity.x < maxSpeed) {
 			// ... add a force to the player.
 			rigidbody2D.AddForce(Vector2.right * h * moveForce);
+		}
 
 		// If the player's horizontal velocity is greater than the maxSpeed...
-		if(Mathf.Abs(rigidbody2D.velocity.x) > maxSpeed)
+		if(Mathf.Abs(rigidbody2D.velocity.x) > maxSpeed) {
 			// ... set the player's velocity to the maxSpeed in the x axis.
 			rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
+		}
 
 		// If the input is moving the player right and the player is facing left...
-		if(h > 0 && !facingRight)
+		if(h > 0 && !facingRight) {
 			// ... flip the player.
 			Flip();
+		}
 		// Otherwise if the input is moving the player left and the player is facing right...
-		else if(h < 0 && facingRight)
+		else if(h < 0 && facingRight) {
 			// ... flip the player.
 			Flip();
+		}
 
 		// If the player should jump...
 		if(jump)
@@ -73,7 +108,7 @@ public class PlayerControl : MonoBehaviour
 			//anim.SetTrigger("Jump");
 
 			// Add a vertical force to the player.
-			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+			rigidbody2D.AddForce(jumpDirection);
 
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			jump = false;
@@ -92,4 +127,23 @@ public class PlayerControl : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+
+		if(collision.gameObject.layer == LayerMask.NameToLayer("Ground") && collision.relativeVelocity.sqrMagnitude > 0.01) {
+			Vector2 averagePoint = Vector2.zero;
+			Vector2 averageNormal = Vector2.zero;
+			foreach(ContactPoint2D contact in collision.contacts) {
+				averagePoint += contact.point;
+				averageNormal += contact.normal;
+			}
+			averagePoint /= collision.contacts.Length;
+			averageNormal /= collision.contacts.Length;
+			Vector3 velocity = Vector3.Cross(averageNormal, Vector3.forward);
+			for(int i = 0; i < 10; i++) {
+				Vector3 vel = 5f * (Random.value > 0.5f ? velocity : -velocity) + (Vector3)(averageNormal * Random.Range(0f, 2.0f));
+				landParticles.Emit(averagePoint, vel, Random.Range(0.25f, 0.5f), 0.25f, Color.white);
+			}
+		}
+	}
 }

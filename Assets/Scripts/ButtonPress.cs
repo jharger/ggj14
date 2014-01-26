@@ -2,40 +2,29 @@
 using System.Collections;
 
 public class ButtonPress : MonoBehaviour {
-
-
-	bool pressed = false;
+	public int buttonIndex = 0;
 	private Animator anim;
 	private BoxCollider2D bc;
-	// Use this for initialization
+
 	void Start () {
 		anim = GetComponent<Animator>();
 		bc  = GetComponent<BoxCollider2D>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		anim.SetBool("ButtonPressed",pressed);
-	}
-
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		Debug.Log("y: " + col.relativeVelocity.y+ "x:" + col.relativeVelocity.x);
 		if(Mathf.Abs(col.relativeVelocity.y) > Mathf.Abs(col.relativeVelocity.x))
 		{
-			pressed = true;
 			//bc.transform.position = new Vector3(bc.transform.position.x,bc.transform.position.y-.3f,bc.transform.position.z);
+			anim.SetBool("ButtonPressed", true);
+			transform.root.BroadcastMessage("YouHaveChosen", buttonIndex);
 		}
 	}
 
-	void OnCollisionExit2D()
+	void YouHaveChosen(int buttonIndex)
 	{
-
-		/*if(pressed)
-		{
-			bc.transform.position = new Vector3(bc.transform.position.x,bc.transform.position.y+.3f,bc.transform.position.z);
-		}*/
-		pressed = false;
-	
+		Destroy (bc);
+		bc = null;
 	}
 }

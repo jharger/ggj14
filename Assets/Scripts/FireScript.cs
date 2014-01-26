@@ -9,7 +9,7 @@ public class FireScript : MonoBehaviour {
 	void Start () {
 	
 		ps = GetComponent<ParticleSystem>();
-		ps.renderer.sortingLayerName("Foreground");
+		ps.renderer.sortingLayerName = "Foreground";
 		burnShit();
 	}
 	

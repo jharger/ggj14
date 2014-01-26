@@ -42,6 +42,10 @@ public class GrappleControl : MonoBehaviour {
 
 	void LateUpdate()
 	{
+		if(!player) {
+			return;
+		}
+
 		float dist = Vector3.Distance(transform.position, player.position);
 		lineRenderer.SetPosition(0, transform.position);
 		lineRenderer.SetPosition(1, player.position);

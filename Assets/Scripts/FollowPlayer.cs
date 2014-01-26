@@ -16,6 +16,9 @@ public class FollowPlayer : MonoBehaviour
 
 	void Update ()
 	{
+		if(!player) {
+			return;
+		}
 		// Set the position to the player's position with the offset.
 		transform.position = player.position + offset;
 	}

@@ -48,4 +48,9 @@ public class FadeAwayEffect : MonoBehaviour {
 			break;
 		}
 	}
+
+	void LateUpdate()
+	{
+		transform.rotation = Quaternion.AngleAxis(-90f, Vector3.right); 
+	}
 }

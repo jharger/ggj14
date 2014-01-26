@@ -46,6 +46,30 @@ public class UpgradeViewer : Singleton<UpgradeViewer> {
 		mindBase.parent = transform;
 	}
 
+	void Start()
+	{
+		if(PlayerPrefs.HasKey("playerLoveLevel")) {
+			int loves = PlayerPrefs.GetInt("playerLoveLevel");
+			for(int i = 0; i < loves; i ++) {
+				AddLove();
+			}
+		}
+
+		if(PlayerPrefs.HasKey("playerGreedLevel")) {
+			int greeds = PlayerPrefs.GetInt("playerGreedLevel");
+			for(int i = 0; i < greeds; i ++) {
+				AddGreed();
+			}
+		}
+
+		if(PlayerPrefs.HasKey("playerSmartLevel")) {
+			int smarts = PlayerPrefs.GetInt("playerSmartLevel");
+			for(int i = 0; i < smarts; i ++) {
+				AddKnowledge();
+			}
+		}
+	}
+
 	void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.Alpha1)) {
@@ -86,6 +110,8 @@ public class UpgradeViewer : Singleton<UpgradeViewer> {
 		}
 		Transform item = (Transform)Instantiate(loveSprite);
 		AddItem(item, loveBase);
+
+		PlayerPrefs.SetInt("playerLoveLevel", nextLove);
 	}
 
 	public void AddGreed()
@@ -98,6 +124,8 @@ public class UpgradeViewer : Singleton<UpgradeViewer> {
 		}
 		Transform item = (Transform)Instantiate(moneySprite);
 		AddItem(item, moneyBase);
+
+		PlayerPrefs.SetInt("playerGreedLevel", nextSword);
 	}
 
 	public void AddKnowledge()
@@ -109,6 +137,8 @@ public class UpgradeViewer : Singleton<UpgradeViewer> {
 		}
 		Transform item = (Transform)Instantiate(knowledgeSprite);
 		AddItem(item, mindBase);
+
+		PlayerPrefs.SetInt("playerSmartLevel", nextMind);
 	}
 
 	void AddItem(Transform item, Transform parent)

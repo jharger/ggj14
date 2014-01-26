@@ -12,11 +12,13 @@ public class NPCControl : MonoBehaviour
 	//public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
 	public float attackDistance = 1f;
+	public bool boss = false;
 
 	public AudioClip swordClip;
 	public AudioClip deathClip;
 	public float swordAttackDelay = 0.5f;
 	float swordcountdown = 0f;
+	public Rigidbody2D bossFireball;
 
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private Transform rightWallCheck;
@@ -63,9 +65,20 @@ public class NPCControl : MonoBehaviour
 
 		if(swordcountdown <= 0f) {
 			Vector2 attackDir = new Vector2(walkDir * attackDistance, 0.5f);
-			if(Physics2D.Linecast(transform.position + new Vector3(0f, 0.5f, 0f), attackDir, 1 << LayerMask.NameToLayer("Player"))) {
-				audio.PlayOneShot(swordClip, 0.25f);
-				anim.SetTrigger("Attack");
+			if(boss) {
+				anim.SetTrigger("Cast");
+				Rigidbody2D fireball = (Rigidbody2D)Instantiate(bossFireball, transform.position, Quaternion.identity);
+				GameObject obj = GameObject.FindGameObjectWithTag("Player");
+				if(obj) {
+					Vector3 dir = obj.transform.position - transform.position;
+					fireball.velocity = dir.normalized * 5f;
+					audio.PlayOneShot(swordClip, 0.25f);
+				}
+			} else {
+				if(Physics2D.Linecast(transform.position + new Vector3(0f, 0.5f, 0f), attackDir, 1 << LayerMask.NameToLayer("Player"))) {
+					anim.SetTrigger("Attack");
+					audio.PlayOneShot(swordClip, 0.25f);
+				}
 			}
 			swordcountdown = swordAttackDelay;
 		}

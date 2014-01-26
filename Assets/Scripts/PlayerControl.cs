@@ -116,7 +116,7 @@ public class PlayerControl : MonoBehaviour
 
 		float h = Input.GetAxis("Horizontal") * moveScale;
 
-		anim.SetFloat(animVarSpeed, rigidbody2D.velocity.x);
+		anim.SetFloat(animVarSpeed, h);
 
 		float force = h * moveForce;
 		float tmpMax = Mathf.Sign(h) * maxWalkSpeed;

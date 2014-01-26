@@ -1953,7 +1953,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_212
+    - name: rock11
       rect:
         serializedVersion: 2
         x: 0
@@ -1962,7 +1962,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_213
+    - name: rock10
       rect:
         serializedVersion: 2
         x: 32
@@ -1971,7 +1971,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_214
+    - name: rock9
       rect:
         serializedVersion: 2
         x: 64
@@ -1980,7 +1980,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_215
+    - name: rock8
       rect:
         serializedVersion: 2
         x: 96
@@ -1989,7 +1989,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_216
+    - name: rock7
       rect:
         serializedVersion: 2
         x: 128
@@ -1998,7 +1998,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_217
+    - name: rock6
       rect:
         serializedVersion: 2
         x: 160
@@ -2088,7 +2088,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_227
+    - name: rock5
       rect:
         serializedVersion: 2
         x: 0
@@ -2097,7 +2097,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_228
+    - name: rock4
       rect:
         serializedVersion: 2
         x: 32
@@ -2106,7 +2106,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_229
+    - name: rock3
       rect:
         serializedVersion: 2
         x: 64
@@ -2115,7 +2115,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_230
+    - name: rock2
       rect:
         serializedVersion: 2
         x: 96
@@ -2124,7 +2124,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_231
+    - name: rock1
       rect:
         serializedVersion: 2
         x: 128
@@ -2133,7 +2133,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: grass_9_232
+    - name: rock0
       rect:
         serializedVersion: 2
         x: 160

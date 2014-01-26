@@ -24,13 +24,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: 0
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -44,6 +44,654 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: OniMaleSpritePageA_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 405
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 405
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 405
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_3
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 405
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_4
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 405
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_5
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 405
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_6
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 405
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_7
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 405
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_8
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 405
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_9
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 348
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_10
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 348
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_11
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 348
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_12
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 348
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_13
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 348
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_14
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 348
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_15
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 348
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_16
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 348
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_17
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 348
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 291
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_19
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 291
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_20
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 291
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_21
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 291
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_22
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 291
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_23
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 291
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_24
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 291
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_25
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 291
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_26
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 291
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 234
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_28
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 234
+        width: 25
+        height: 48
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_29
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 234
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_30
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 234
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_31
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 234
+        width: 25
+        height: 48
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_32
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 234
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_33
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 234
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_34
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 234
+        width: 25
+        height: 48
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_35
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 234
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 177
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_37
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 177
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_38
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 177
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_39
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 177
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_40
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 177
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_41
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 177
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_42
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 177
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_43
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 177
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_44
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 177
+        width: 25
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_45
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 120
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_46
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 120
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_47
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 120
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_48
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 120
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_49
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 120
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_50
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 120
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_51
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 120
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_52
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 120
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_53
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 120
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_54
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 63
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_55
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 63
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_56
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 63
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_57
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 63
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_58
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 63
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_59
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 63
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_60
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 63
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_61
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 63
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_62
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 63
+        width: 24
+        height: 45
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_63
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 6
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_64
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 6
+        width: 25
+        height: 48
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_65
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 6
+        width: 25
+        height: 48
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_66
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 6
+        width: 25
+        height: 48
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_67
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 6
+        width: 25
+        height: 48
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_68
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 6
+        width: 25
+        height: 48
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_69
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 6
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_70
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 6
+        width: 25
+        height: 48
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: OniMaleSpritePageA_71
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 6
+        width: 25
+        height: 47
+      alignment: 7
+      pivot: {x: 0, y: 0}
   spritePackingTag: 
   userData: 

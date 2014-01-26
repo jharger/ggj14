@@ -47,7 +47,7 @@ public class GrappleControl : MonoBehaviour {
 		lineRenderer.SetPosition(1, player.position);
 
 		float scale = dist / ropeScale;
-		lineRenderer.sharedMaterial.mainTextureScale = new Vector2(scale, 1f);
+		lineRenderer.material.mainTextureScale = new Vector2(scale, 1f);
 
 		if(dist > maxGrappleLength) {
 			Disconnect();

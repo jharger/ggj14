@@ -2991,9 +2991,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &29957351
 Animator:
@@ -3657,56 +3659,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300046, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &43050784
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 43050786}
-  - 212: {fileID: 43050785}
-  m_Layer: 0
-  m_Name: grass_9fall_74
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &43050785
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43050784}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300148, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &43050786
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43050784}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -183.044601, y: 91.8863068, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 640331402}
 --- !u!1 &46212089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3809,7 +3761,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
       propertyPath: NextLevel
-      value: BossLevel
+      value: JohnBossLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
@@ -4720,9 +4672,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &60738377
 Animator:
@@ -7741,56 +7695,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300046, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &105388723
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 105388724}
-  - 212: {fileID: 105388725}
-  m_Layer: 0
-  m_Name: grass_9fall_72
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &105388724
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 105388723}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -183.044601, y: 89.886322, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 640331402}
---- !u!212 &105388725
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 105388723}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300144, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &108272252
 GameObject:
   m_ObjectHideFlags: 0
@@ -8251,9 +8155,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &117770975
 Animator:
@@ -16485,9 +16391,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &199255772
 Animator:
@@ -16943,7 +16851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a40c573a6eef24993d23d5b20e0344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: BossLevel
+  NextLevel: JohnBossLevel
 --- !u!50 &209562333
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -20880,46 +20788,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300046, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1001 &283898239
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 640331402}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.84587669
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.02972293
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -.619140625
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
-  m_RootGameObject: {fileID: 959416695}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &284483738
 GameObject:
   m_ObjectHideFlags: 0
@@ -27644,56 +27512,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300046, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &362729458
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 362729459}
-  - 212: {fileID: 362729460}
-  m_Layer: 0
-  m_Name: grass_9fall_75
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &362729459
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 362729458}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -181.044479, y: 91.8863068, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 640331402}
---- !u!212 &362729460
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 362729458}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300150, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &363529238
 GameObject:
@@ -36679,9 +36497,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &518861380
 Animator:
@@ -44458,39 +44278,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300046, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &640331401
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 640331402}
-  m_Layer: 0
-  m_Name: CreepyDoor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &640331402
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 640331401}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.96272182, y: 1.49473763, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 959416696}
-  - {fileID: 1170164486}
-  - {fileID: 1862873800}
-  - {fileID: 105388724}
-  - {fileID: 1911513185}
-  - {fileID: 43050786}
-  - {fileID: 362729459}
-  m_Father: {fileID: 0}
 --- !u!1 &640675011
 GameObject:
   m_ObjectHideFlags: 0
@@ -60951,9 +60738,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &951116910
 Animator:
@@ -61426,76 +61215,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300046, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &959416695
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
-  m_PrefabInternal: {fileID: 283898239}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 959416696}
-  - 61: {fileID: 959416699}
-  - 50: {fileID: 959416698}
-  - 114: {fileID: 959416697}
-  m_Layer: 12
-  m_Name: DoorCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &959416696
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 6df115d1a2cc9e646b9ba7473631e668, type: 2}
-  m_PrefabInternal: {fileID: 283898239}
-  m_GameObject: {fileID: 959416695}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.84587669, y: 2.02972293, z: -.619140625}
-  m_LocalScale: {x: 2.6709466, y: 4.83429241, z: 4.83429241}
-  m_Children: []
-  m_Father: {fileID: 640331402}
---- !u!114 &959416697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6df115d1a2cc9e646b9ba7473631e668,
-    type: 2}
-  m_PrefabInternal: {fileID: 283898239}
-  m_GameObject: {fileID: 959416695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39a40c573a6eef24993d23d5b20e0344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextLevel: anotherLevel
---- !u!50 &959416698
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5000000, guid: 6df115d1a2cc9e646b9ba7473631e668,
-    type: 2}
-  m_PrefabInternal: {fileID: 283898239}
-  m_GameObject: {fileID: 959416695}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!61 &959416699
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 6df115d1a2cc9e646b9ba7473631e668,
-    type: 2}
-  m_PrefabInternal: {fileID: 283898239}
-  m_GameObject: {fileID: 959416695}
-  m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: ed5ad547274f94dcfaa1c40ab19bdf1b, type: 2}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 0}
 --- !u!1 &962791541
 GameObject:
   m_ObjectHideFlags: 0
@@ -72038,9 +71757,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &1168714619
 Animator:
@@ -72248,56 +71969,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300046, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1170164485
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1170164486}
-  - 212: {fileID: 1170164487}
-  m_Layer: 0
-  m_Name: grass_9fall_64
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1170164486
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170164485}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -183.044601, y: 93.8863068, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 640331402}
---- !u!212 &1170164487
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170164485}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300128, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1170189407
 GameObject:
@@ -90524,9 +90195,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &1460342037
 Animator:
@@ -91050,9 +90723,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &1465372184
 Animator:
@@ -94497,9 +94172,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &1561595313
 Animator:
@@ -101003,9 +100680,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &1668492649
 Animator:
@@ -111034,56 +110713,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 60738374}
---- !u!1 &1862873799
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1862873800}
-  - 212: {fileID: 1862873801}
-  m_Layer: 0
-  m_Name: grass_9fall_65
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1862873800
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1862873799}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -181.044479, y: 93.8863068, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 640331402}
---- !u!212 &1862873801
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1862873799}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300130, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1866351074
 GameObject:
   m_ObjectHideFlags: 0
@@ -114879,9 +114508,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &1906542944
 Animator:
@@ -115230,56 +114861,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300084, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1911513184
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1911513185}
-  - 212: {fileID: 1911513186}
-  m_Layer: 0
-  m_Name: grass_9fall_73
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1911513185
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1911513184}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -181.044479, y: 89.886322, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 640331402}
---- !u!212 &1911513186
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1911513184}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300146, guid: d403414bd30de974a9e0ff2e953047a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1911615700
 GameObject:
@@ -125831,9 +125412,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   attackDistance: 3
+  boss: 0
   swordClip: {fileID: 8300000, guid: b76d544f27422467fb2bebff62a5e69e, type: 3}
   deathClip: {fileID: 8300000, guid: 337b01b63e8cd4730854930afd7b4307, type: 3}
   swordAttackDelay: .5
+  bossFireball: {fileID: 0}
   walkCountdown: 0
 --- !u!95 &2123477826
 Animator:

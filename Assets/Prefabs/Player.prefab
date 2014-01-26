@@ -386,10 +386,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
-  moveForce: 200
-  maxWalkSpeed: 5
+  moveForce: 365
+  maxWalkSpeed: 10
   maxSpeed: 25
-  jumpForce: 820
+  jumpForce: 1250
   grappleMoveScale: .0500000007
 --- !u!114 &11400002
 MonoBehaviour:

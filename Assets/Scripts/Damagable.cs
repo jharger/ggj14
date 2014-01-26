@@ -8,6 +8,7 @@ public class Damagable : MonoBehaviour {
 	public int health;
 	private SpriteRenderer healthBar;
 	private float countdown = 0f;
+	private float maxDeathDistance = -2000f;
 	private Animator anim;
 
 	private int animVarDeath = Animator.StringToHash("Death");
@@ -33,11 +34,23 @@ public class Damagable : MonoBehaviour {
 			}
 		}
 
-		if(transform.position.y < -20f) {
+		if(transform.position.y < maxDeathDistance) {
 			Destroy(gameObject);
 		}
 	}
-	
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		Debug.Log("TriggerEntered");
+		if (other.CompareTag("KillsYou"))
+		{
+			Debug.Log("TookDamage");
+			TakeDamage(1000000);
+
+		}
+
+	}
+
 	void TakeDamage (int amt) {
 		if(!enabled) {
 			return;

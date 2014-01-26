@@ -17,6 +17,7 @@ public class Damagable : MonoBehaviour {
 		healthBar = transform.Find("HealthBar").GetComponent<SpriteRenderer>();
 		healthBar.enabled = false;
 		anim = GetComponent<Animator>();
+		TakeDamage(100);
 	}
 
 	void Update()
@@ -35,10 +36,28 @@ public class Damagable : MonoBehaviour {
 	}
 	
 	void TakeDamage (int amt) {
+		if(!enabled) {
+			return;
+		}
+
 		health -= amt;
 		if(health < 0) {
 			BloodManager.instance.EmitBlood(transform.position, 50);
 			anim.SetTrigger(animVarDeath);
+			enabled = false;
+
+			if(rigidbody2D) {
+				rigidbody2D.isKinematic = true;
+			}
+			if(collider2D) {
+				collider2D.enabled = false;
+			}
+
+			SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+			if(sprite) {
+				EffectManager.instance.FadeAway(transform.position, sprite);
+			}
+
 			return;
 		}
 		BloodManager.instance.EmitBlood(transform.position, 5);

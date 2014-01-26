@@ -563,6 +563,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0b7b1f529cc0e409ca98e92df05131b4, type: 2}
+      propertyPath: moveForce
+      value: 365
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0b7b1f529cc0e409ca98e92df05131b4, type: 2}
+      propertyPath: maxWalkSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b7b1f529cc0e409ca98e92df05131b4, type: 2}
   m_RootGameObject: {fileID: 798759567}
@@ -2747,8 +2755,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
-  moveForce: 200
-  maxWalkSpeed: 5
+  moveForce: 365
+  maxWalkSpeed: 10
   maxSpeed: 25
   jumpForce: 820
   grappleMoveScale: .0500000007
@@ -2808,7 +2816,7 @@ GameObject:
   - 61: {fileID: 813651673}
   m_Layer: 12
   m_Name: TallWall
-  m_TagString: Untagged
+  m_TagString: Grapple-Able
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4043,7 +4051,7 @@ GameObject:
   - 61: {fileID: 1472248395}
   m_Layer: 12
   m_Name: Platform1
-  m_TagString: Untagged
+  m_TagString: Grapple-Able
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4907,7 +4915,7 @@ GameObject:
   - 61: {fileID: 1726908481}
   m_Layer: 12
   m_Name: Plaform3
-  m_TagString: Untagged
+  m_TagString: Grapple-Able
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6747,7 +6755,7 @@ GameObject:
   - 61: {fileID: 2118017001}
   m_Layer: 12
   m_Name: MainFloor
-  m_TagString: Untagged
+  m_TagString: Grapple-Able
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

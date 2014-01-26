@@ -103,6 +103,9 @@ public class GrappleControl : MonoBehaviour {
 			isAnchored = true;
 			grappleJoint.distance = Vector3.Distance(player.position, transform.position);
 			isPulling = true;
+		} else {
+			// We hit something un-grapple-able
+			Disconnect();
 		}
 	}
 }

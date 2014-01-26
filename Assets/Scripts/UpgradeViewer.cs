@@ -90,6 +90,7 @@ public class UpgradeViewer : Singleton<UpgradeViewer> {
 
 	public void AddGreed()
 	{
+		player.SendMessage("OnGreed");
 		if(nextSword < swordSprites.Length) {
 			sword.SetSprite(swordSprites[nextSword].sprite);
 			swordMaterial = swordSprites[nextSword].name;

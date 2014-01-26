@@ -38,7 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee49845ee2f94737a575e7ac8be4124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeAwayPrefab: {fileID: 0}
+  fadeAwayPrefab: {fileID: 11400000, guid: 04e4d5192eaa14bc0b9ff58a7ffa9380, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

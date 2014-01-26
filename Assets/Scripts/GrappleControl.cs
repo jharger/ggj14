@@ -91,12 +91,17 @@ public class GrappleControl : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		grappleJoint.enabled = true;
-		rigidbody2D.isKinematic = true;
-		isAnchored = true;
-		grappleJoint.distance = Vector3.Distance(player.position, transform.position);
-
+		if(other.CompareTag("Grapple-Able")) {
+			grappleJoint.enabled = true;
+			rigidbody2D.isKinematic = true;
+			isAnchored = true;
+			grappleJoint.distance = Vector3.Distance(player.position, transform.position);
+		} else
 		if(other.CompareTag("Enemy")) {
+			grappleJoint.enabled = true;
+			rigidbody2D.isKinematic = true;
+			isAnchored = true;
+			grappleJoint.distance = Vector3.Distance(player.position, transform.position);
 			isPulling = true;
 		}
 	}

@@ -4,8 +4,6 @@ using System.Collections;
 public class NPCControl : MonoBehaviour
 {
 	[HideInInspector]
-	public bool facingRight = true;			// For determining which way the player is currently facing.
-	[HideInInspector]
 	public bool jump = false;				// Condition for whether the player should jump.
 	
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
@@ -13,6 +11,7 @@ public class NPCControl : MonoBehaviour
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
 	//public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
+	public float attackDistance = 1f;
 
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private Transform rightWallCheck;
@@ -20,11 +19,15 @@ public class NPCControl : MonoBehaviour
 	private bool grounded = false;			// Whether or not the player is grounded.
 	private bool rightWalled = false;
 	private bool leftWalled = false;
+	private bool leftSafe = false;
+	private bool rightSafe = false;
 	private Vector2 jumpDirection = Vector2.zero;
 	private bool okayToWallJump = true;
-	//private Animator anim;					// Reference to the player's animator component.
+	private Animator anim;					// Reference to the player's animator component.
 	
 	private ParticleSystem landParticles;
+	private float walkDir = 0f;
+	public float walkCountdown = 0f;
 	
 	void Awake()
 	{
@@ -35,18 +38,34 @@ public class NPCControl : MonoBehaviour
 		landParticles = transform.Find("landParticles").GetComponent<ParticleSystem>();
 		landParticles.renderer.sortingLayerName = "foreground";
 		landParticles.renderer.sortingOrder = 5;
-		//anim = GetComponent<Animator>();
+		anim = GetComponent<Animator>();
 	}
-	
+
+	void Start()
+	{
+		ChangeDirection(false);
+	}
 	
 	void Update()
 	{
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
 		rightWalled = Physics2D.Linecast(transform.position, rightWallCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 		leftWalled = Physics2D.Linecast(transform.position, leftWallCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-		
+		rightSafe = Physics2D.Linecast(rightWallCheck.position, rightWallCheck.position - Vector3.up, 1 << LayerMask.NameToLayer("Ground"));
+		leftSafe = Physics2D.Linecast(leftWallCheck.position, leftWallCheck.position - Vector3.up, 1 << LayerMask.NameToLayer("Ground"));
+
+		Vector2 attackDir = new Vector2(walkDir * attackDistance, 0.5f);
+		if(Physics2D.Linecast(transform.position + new Vector3(0f, 0.5f, 0f), attackDir, 1 << LayerMask.NameToLayer("Player"))) {
+			anim.SetTrigger("Attack");
+		}
+
 		if(!rightWalled && !leftWalled) {
 			okayToWallJump = true;
+		}
+
+		walkCountdown -= Time.deltaTime;
+		if(walkCountdown <= 0f) {
+			ChangeDirection(true);
 		}
 		
 		if(false) { // TODO
@@ -72,9 +91,19 @@ public class NPCControl : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
-		float h = 0f; // TODO
+		if(walkDir < 0f) {
+			if(leftWalled || !leftSafe) {
+				ChangeDirection(true);
+			}
+		} else {
+			if(rightWalled || !rightSafe) {
+				ChangeDirection(true);
+			}
+		}
+
+		float h = walkDir;
 		
-		//anim.SetFloat("Speed", Mathf.Abs(h));
+		anim.SetFloat("Speed", h);
 		float force = h * moveForce;
 		float tmpMax = Mathf.Sign(h) * maxWalkSpeed;
 		float diff = (tmpMax - rigidbody2D.velocity.x) / Time.fixedDeltaTime;
@@ -89,14 +118,7 @@ public class NPCControl : MonoBehaviour
 		if(Mathf.Abs(rigidbody2D.velocity.x) > maxSpeed) {
 			rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
 		}
-		
-		if(h > 0 && !facingRight) {
-			Flip();
-		}
-		else if(h < 0 && facingRight) {
-			Flip();
-		}
-		
+
 		if(jump)
 		{
 			//anim.SetTrigger("Jump");
@@ -105,16 +127,6 @@ public class NPCControl : MonoBehaviour
 			
 			jump = false;
 		}
-	}
-	
-	
-	void Flip ()
-	{
-		facingRight = !facingRight;
-		
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
 	}
 	
 	void OnCollisionEnter2D(Collision2D collision)
@@ -135,5 +147,22 @@ public class NPCControl : MonoBehaviour
 				landParticles.Emit(averagePoint, vel, Random.Range(0.25f, 0.5f), 0.25f, Color.white);
 			}
 		}
+	}
+
+	void ChangeDirection(bool reverse)
+	{
+		if(reverse) {
+			walkDir = -walkDir;
+		} else {
+			walkDir = Mathf.Sign(Random.Range(-1f, 1f));
+		}
+
+		walkCountdown = Random.Range(5f, 10f);
+	}
+
+	void OnDeath()
+	{
+		gameObject.layer = LayerMask.NameToLayer("Safety");
+		enabled = false;
 	}
 }

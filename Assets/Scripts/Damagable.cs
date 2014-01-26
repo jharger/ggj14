@@ -17,7 +17,6 @@ public class Damagable : MonoBehaviour {
 		healthBar = transform.Find("HealthBar").GetComponent<SpriteRenderer>();
 		healthBar.enabled = false;
 		anim = GetComponent<Animator>();
-		TakeDamage(100);
 	}
 
 	void Update()
@@ -33,6 +32,10 @@ public class Damagable : MonoBehaviour {
 				healthBar.enabled = false;
 			}
 		}
+
+		if(transform.position.y < -20f) {
+			Destroy(gameObject);
+		}
 	}
 	
 	void TakeDamage (int amt) {
@@ -47,16 +50,15 @@ public class Damagable : MonoBehaviour {
 			enabled = false;
 
 			if(rigidbody2D) {
-				rigidbody2D.isKinematic = true;
-			}
-			if(collider2D) {
-				collider2D.enabled = false;
+				rigidbody2D.fixedAngle = false;
 			}
 
 			SpriteRenderer sprite = GetComponent<SpriteRenderer>();
 			if(sprite) {
-				EffectManager.instance.FadeAway(transform.position, sprite);
+				EffectManager.instance.FadeAway(transform, sprite);
 			}
+
+			SendMessage("OnDeath", SendMessageOptions.DontRequireReceiver);
 
 			return;
 		}

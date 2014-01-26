@@ -13,4 +13,9 @@ public class SwordControl : MonoBehaviour {
 			other.attachedRigidbody.AddForce(new Vector2(baseForce.x * dir, baseForce.y));
 		}
 	}
+
+	public void SetSprite(Sprite sprite)
+	{
+		GetComponent<SpriteRenderer>().sprite = sprite;
+	}
 }

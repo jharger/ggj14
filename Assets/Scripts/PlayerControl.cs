@@ -15,6 +15,10 @@ public class PlayerControl : MonoBehaviour
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
 	public float grappleMoveScale = 0.1f;
 
+	public AudioClip jumpClip;
+	public AudioClip landClip;
+	public AudioClip swordClip;
+
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private Transform rightWallCheck;
 	private Transform leftWallCheck;
@@ -86,6 +90,7 @@ public class PlayerControl : MonoBehaviour
 
 		if(Input.GetButtonDown("Fire1")) {
 			anim.SetTrigger(animVarAttack);
+			audio.PlayOneShot(swordClip);
 		}
 	}
 
@@ -139,6 +144,8 @@ public class PlayerControl : MonoBehaviour
 
 			anim.SetTrigger("Jump");
 
+			audio.PlayOneShot(jumpClip);
+
 			rigidbody2D.AddForce(jumpDirection);
 
 			jump = false;
@@ -160,6 +167,12 @@ public class PlayerControl : MonoBehaviour
 			for(int i = 0; i < 10; i++) {
 				Vector3 vel = 5f * (Random.value > 0.5f ? velocity : -velocity) + (Vector3)(averageNormal * Random.Range(0f, 2.0f));
 				landParticles.Emit(averagePoint, vel, Random.Range(0.25f, 0.5f), 0.25f, Color.white);
+			}
+
+			if(collision.relativeVelocity.y < -10f) {
+				if(!audio.isPlaying) {
+					audio.PlayOneShot(landClip, 0.5f);
+				}
 			}
 		}
 	}

@@ -13,6 +13,11 @@ public class NPCControl : MonoBehaviour
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
 	public float attackDistance = 1f;
 
+	public AudioClip swordClip;
+	public AudioClip deathClip;
+	public float swordAttackDelay = 0.5f;
+	float swordcountdown = 0f;
+
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private Transform rightWallCheck;
 	private Transform leftWallCheck;
@@ -54,9 +59,15 @@ public class NPCControl : MonoBehaviour
 		rightSafe = Physics2D.Linecast(rightWallCheck.position, rightWallCheck.position - Vector3.up, 1 << LayerMask.NameToLayer("Ground"));
 		leftSafe = Physics2D.Linecast(leftWallCheck.position, leftWallCheck.position - Vector3.up, 1 << LayerMask.NameToLayer("Ground"));
 
-		Vector2 attackDir = new Vector2(walkDir * attackDistance, 0.5f);
-		if(Physics2D.Linecast(transform.position + new Vector3(0f, 0.5f, 0f), attackDir, 1 << LayerMask.NameToLayer("Player"))) {
-			anim.SetTrigger("Attack");
+		swordcountdown -= Time.deltaTime;
+
+		if(swordcountdown <= 0f) {
+			Vector2 attackDir = new Vector2(walkDir * attackDistance, 0.5f);
+			if(Physics2D.Linecast(transform.position + new Vector3(0f, 0.5f, 0f), attackDir, 1 << LayerMask.NameToLayer("Player"))) {
+				audio.PlayOneShot(swordClip, 0.25f);
+				anim.SetTrigger("Attack");
+			}
+			swordcountdown = swordAttackDelay;
 		}
 
 		if(!rightWalled && !leftWalled) {
@@ -162,6 +173,7 @@ public class NPCControl : MonoBehaviour
 
 	void OnDeath()
 	{
+		audio.PlayOneShot(deathClip);
 		gameObject.layer = LayerMask.NameToLayer("Safety");
 		enabled = false;
 	}

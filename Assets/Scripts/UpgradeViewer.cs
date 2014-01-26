@@ -44,7 +44,10 @@ public class UpgradeViewer : Singleton<UpgradeViewer> {
 		loveBase.parent = transform;
 		mindBase = new GameObject("Smarts").transform;
 		mindBase.parent = transform;
+	}
 
+	void Start()
+	{
 		if(PlayerPrefs.HasKey("playerLoveLevel")) {
 			int loves = PlayerPrefs.GetInt("playerLoveLevel");
 			for(int i = 0; i < loves; i ++) {

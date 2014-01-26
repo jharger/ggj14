@@ -15,6 +15,10 @@ public class GrappleControl : MonoBehaviour {
 	[HideInInspector]
 	public bool isPulling = false;
 
+	public AudioClip hitClip;
+	public AudioClip fireClip;
+	public AudioClip deniedClip;
+
 	private DistanceJoint2D grappleJoint;
 	private LineRenderer lineRenderer;
 	private SpriteRenderer anchor;
@@ -62,6 +66,8 @@ public class GrappleControl : MonoBehaviour {
 	{
 		Disconnect();
 
+		audio.PlayOneShot(fireClip);
+
 		lineRenderer.SetPosition(0, origin);
 		lineRenderer.SetPosition(1, origin);
 
@@ -100,6 +106,7 @@ public class GrappleControl : MonoBehaviour {
 			rigidbody2D.isKinematic = true;
 			isAnchored = true;
 			grappleJoint.distance = Vector3.Distance(player.position, transform.position);
+			audio.PlayOneShot(hitClip);
 		} else
 		if(other.CompareTag("Enemy")) {
 			grappleJoint.enabled = true;
@@ -107,8 +114,10 @@ public class GrappleControl : MonoBehaviour {
 			isAnchored = true;
 			grappleJoint.distance = Vector3.Distance(player.position, transform.position);
 			isPulling = true;
+			audio.PlayOneShot(hitClip);
 		} else {
 			// We hit something un-grapple-able
+			audio.PlayOneShot(deniedClip);
 			Disconnect();
 		}
 	}

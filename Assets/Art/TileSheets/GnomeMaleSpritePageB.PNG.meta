@@ -24,13 +24,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: 0
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -44,6 +44,330 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: GnomeMaleSpritePageB_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 405
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 405
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 405
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_3
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 405
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_4
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 405
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_5
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 405
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_6
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 405
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_7
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 405
+        width: 24
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_8
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 405
+        width: 23
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 348
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_10
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 348
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_11
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 348
+        width: 22
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_12
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 348
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_13
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 348
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_14
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 348
+        width: 22
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_15
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 348
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_16
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 349
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_17
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 348
+        width: 37
+        height: 21
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_18
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 291
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_19
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 291
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_20
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 291
+        width: 22
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_21
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 291
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_22
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 291
+        width: 21
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_23
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 291
+        width: 22
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_24
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 291
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_25
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 292
+        width: 24
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_26
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 291
+        width: 37
+        height: 21
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_27
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 234
+        width: 23
+        height: 40
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_28
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 234
+        width: 23
+        height: 40
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_29
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 234
+        width: 23
+        height: 40
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_30
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 234
+        width: 23
+        height: 40
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_31
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 234
+        width: 23
+        height: 40
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_32
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 234
+        width: 23
+        height: 40
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_33
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 234
+        width: 23
+        height: 40
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_34
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 234
+        width: 23
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+    - name: GnomeMaleSpritePageB_35
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 229
+        width: 25
+        height: 29
+      alignment: 7
+      pivot: {x: 0, y: 0}
   spritePackingTag: 
   userData: 

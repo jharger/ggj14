@@ -26,13 +26,17 @@ public class GrappleControl : MonoBehaviour {
 		lineRenderer = GetComponent<LineRenderer>();
 		anchor = transform.FindChild("Anchor").GetComponent<SpriteRenderer>();
 
+		transform.parent = null;
+
 		Disconnect();
 	}
 
 	void FixedUpdate()
 	{
 		if(isPulling) {
-			ExtendGrapple(-0.1f);
+			if(ExtendGrapple(-0.1f) < minGrappleLength + 0.01f) {
+				Disconnect();
+			}
 		}
 	}
 
@@ -78,10 +82,11 @@ public class GrappleControl : MonoBehaviour {
 		isPulling = false;
 	}
 
-	public void ExtendGrapple(float amount)
+	public float ExtendGrapple(float amount)
 	{
 		float newDist = Mathf.Clamp(grappleJoint.distance + amount * grappleSpeed,minGrappleLength, maxGrappleLength);
 		grappleJoint.distance = newDist;
+		return newDist;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)

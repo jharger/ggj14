@@ -90,7 +90,11 @@ public class PlayerControl : MonoBehaviour
 	{
 		Vector3 mouseTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		if(Input.GetButtonDown("Fire2")) {
-			grapple.Fire(grappleAnchor.position, mouseTarget);
+			if(grapple.isAnchored) {
+				grapple.Disconnect();
+			} else {
+				grapple.Fire(grappleAnchor.position, mouseTarget);
+			}
 		}
 	}
 
@@ -109,7 +113,8 @@ public class PlayerControl : MonoBehaviour
 
 		float h = Input.GetAxis("Horizontal") * moveScale;
 
-		anim.SetFloat(animVarSpeed, h);
+		anim.SetFloat(animVarSpeed, rigidbody2D.velocity.x);
+
 		float force = h * moveForce;
 		float tmpMax = Mathf.Sign(h) * maxWalkSpeed;
 		float diff = (tmpMax - rigidbody2D.velocity.x) / Time.fixedDeltaTime;

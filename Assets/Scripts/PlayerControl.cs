@@ -34,6 +34,8 @@ public class PlayerControl : MonoBehaviour
 	static int animVarGrounded = Animator.StringToHash("Grounded");
 	static int animVarAttack = Animator.StringToHash("Attack");
 
+	public ParticleSystem cloudNine;
+
 	void Awake()
 	{
 		// Setting up references.
@@ -57,6 +59,7 @@ public class PlayerControl : MonoBehaviour
 	{
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 		anim.SetBool(animVarGrounded, grounded);
+		cloudNine.enableEmission = grounded;
 
 		rightWalled = Physics2D.Linecast(transform.position, rightWallCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 		leftWalled = Physics2D.Linecast(transform.position, leftWallCheck.position, 1 << LayerMask.NameToLayer("Ground"));
